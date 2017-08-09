@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+<div class="jumbotron">
+  <h1>Welcome to the Palindrome Application</h1>
+  <form action="/result" method="post">
+    <label for="input">Enter the number here:</label>
+    <input name="input" value="" type="text" >
+    <button type="submit">Find Palindrome</button>
+
+    <div id ="result">
+      @if(Model != null )
+      {
+        <p>Your String is : @Model.IsPalindrome()</p>
+      }
+    </div>
+  </form>
